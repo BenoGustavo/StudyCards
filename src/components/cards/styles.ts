@@ -27,6 +27,19 @@ export const CardInner = styled.div<{ $animate?: boolean }>`
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 1s;
+
+  @media (max-width: 1050px) {
+    width: 60%;
+  }
+
+  @media (max-width: 880px) {
+    width: 80%;
+  }
+
+  @media (max-width: 670px) {
+    width: 90%;
+  }
+
   ${({ $animate }) =>
     $animate
       ? css`
@@ -46,6 +59,10 @@ export const CardContainer = styled.section<{ $animate?: boolean}>`
   align-items: center;
   margin-top: 7.5rem;
   border-radius: 1.2rem;
+
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
 `
 
 export const CardFront = styled.div`
@@ -60,6 +77,10 @@ export const CardFront = styled.div`
   border-radius: 1.2rem;
   flex-direction: column;
   box-shadow: 8px 8px 10px 1px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
 `;
 
 export const CardBack = styled.div`
@@ -76,7 +97,11 @@ export const CardBack = styled.div`
   justify-content: space-between;
   border-radius: 1.2rem;
   box-shadow: 8px 8px 10px 1px rgba(0, 0, 0, 0.2);
-  `;
+
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
+`;
 
 
 export const CardTitleContainer = styled.div`
@@ -125,6 +150,10 @@ export const ClickHereMessage = styled.span`
     &:hover {
         color: ${Colors.newColor1};
     }
+
+    @media (max-width: 600px) {
+      font-size: 1.5rem;
+  }
 `
 
 export const CardAnswer = styled.input`
@@ -141,6 +170,11 @@ export const CardAnswer = styled.input`
     height: 45px;
     margin-bottom: 1rem;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 600px) {
+      height: 35px;
+      font-size: 1.5rem;
+  }
 `
 
 export const CardSubmit = styled.button`
