@@ -28,8 +28,8 @@ export const Card: React.FC<CardProps> = (obj: CardProps) => {
 	};
 
 	return (
-		<CardContainer animate={animate}>
-			<CardInner animate={animate}>
+		<CardContainer $animate={animate ? true : undefined}>
+        <CardInner $animate={animate ? true : undefined}>
 				<CardFront>
 					<CardTitleContainer>
 						<CardTitle color={Colors.white}>{obj.subject}</CardTitle>
@@ -45,7 +45,7 @@ export const Card: React.FC<CardProps> = (obj: CardProps) => {
 					<CardTitleContainer>
 						<CardTitle color='#154B52'>RESPOSTA:</CardTitle>
 					</CardTitleContainer>
-					<CardQuestion fontsize='2.5rem' color='#154B52'>{obj.answer}</CardQuestion>
+					<CardQuestion fontSize='2.5rem' color='#154B52'>{obj.answer}</CardQuestion>
 					<InputContainer>
 						<ClickHereMessage>CLIQUE PARA VOLTAR!</ClickHereMessage>
 					</InputContainer>

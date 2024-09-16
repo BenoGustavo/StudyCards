@@ -19,7 +19,7 @@ const flipBack = keyframes`
   }
 `;
 
-export const CardInner = styled.div<{ animate: boolean }>`
+export const CardInner = styled.div<{ $animate?: boolean }>`
   position: relative;
   display: flex;
   justify-content: center;
@@ -27,8 +27,8 @@ export const CardInner = styled.div<{ animate: boolean }>`
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 1s;
-  ${({ animate }) =>
-    animate
+  ${({ $animate }) =>
+    $animate
       ? css`
           animation: ${flip} 1s forwards;
         `
@@ -37,7 +37,7 @@ export const CardInner = styled.div<{ animate: boolean }>`
         `}
 `;
 
-export const CardContainer = styled.section<{animate: boolean}>`
+export const CardContainer = styled.section<{ $animate?: boolean}>`
   perspective: 1000px;
   height: 80vh;
   display: flex;
@@ -84,7 +84,7 @@ export const CardTitleContainer = styled.div`
 `
 interface CardProps {
     color: string;
-    fontsize? : string;
+    fontSize? : string;
 }
 
 export const CardTitle = styled.h1<CardProps>`
@@ -97,7 +97,7 @@ export const CardTitle = styled.h1<CardProps>`
 `
 
 export const CardQuestion = styled.p<CardProps>`
-    font-size: ${({ fontsize }) => fontsize || '2rem'};;
+    font-size: ${({ fontSize }) => fontSize || '2rem'};;
     color: ${({ color }) => color || 'white'};
     align-self: center;
     justify-self: center;
