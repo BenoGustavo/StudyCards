@@ -36,7 +36,7 @@ export const Card: React.FC<CardProps> = (obj: CardProps) => {
 					</CardTitleContainer>
 					<CardQuestion color={Colors.white}>{obj.question}</CardQuestion>
 					<InputContainer>
-						<CardAnswer placeholder="Responda aqui!" />
+						<CardAnswer placeholder="Anote aqui" />
 						<ClickHereMessage onClick={handleCardSubmission}>CLIQUE NO CARD PARA VER A RESPOSTA!</ClickHereMessage>
 					</InputContainer>
 				</CardFront>

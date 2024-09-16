@@ -119,6 +119,9 @@ export const CardTitle = styled.h1<CardProps>`
     text-align: center;
     text-transform: uppercase;
     user-select: none;
+    @media (max-width: 600px) {
+      font-size: 3rem;
+  }
 `
 
 export const CardQuestion = styled.p<CardProps>`
@@ -127,6 +130,8 @@ export const CardQuestion = styled.p<CardProps>`
     align-self: center;
     justify-self: center;
     user-select: none;
+    margin: 0 3rem;
+    text-align: center;
 `
 
 export const InputContainer = styled.div`
