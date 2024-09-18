@@ -13,13 +13,21 @@ const responsive = {
     },
 };
 
+const shuffleArray = (array: any[]) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
 export const CarouselComponent : React.FC = () => {
 
     return(
         <>
         <CarouselContainer>
                 <Carousel keyBoardControl={true} swipeable={true} infinite={true} responsive={responsive} transitionDuration={500}>
-                    {sampleData.map((data, index) => (
+                    {shuffleArray(sampleData).map((data, index) => (
                         <Card key={index} subject={data.subject} question={data.question} answer={data.answer} />
                     ))}
                 </Carousel>
