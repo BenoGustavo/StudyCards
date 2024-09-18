@@ -119,6 +119,7 @@ export const CardTitle = styled.h1<CardProps>`
     text-align: center;
     text-transform: uppercase;
     user-select: none;
+    padding: 0 1rem;
     @media (max-width: 600px) {
       font-size: 3rem;
   }
